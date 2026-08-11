@@ -3,43 +3,51 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Veterinaria</title>
+        <title>Veterinaria - Sistema de Gestión</title>
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <header>
             <h1>Veterinaria</h1>
-            <p>Bienvenido al sistema de gestión veterinaria para tu clínica.</p>
+            <p>Bienvenido al sistema de gestión para tu clínica.</p>
         </header>
+
         <nav>
-            <a href="index.html">Inicio</a>
+            <a href="index.html" class="active">Inicio</a>
             <a href="contacto.html">Contacto</a>
         </nav>
+
         <main>
             <section class="bienvenida">
                 <h2>Atención completa para mascotas</h2>
                 <p>Organiza pacientes, citas y registros de vacunación de forma rápida y segura.</p>
             </section>
-            <section>
-                <h2>Servicios</h2>
+
+            <section class="servicios">
+                <h2>Servicios principales</h2>
                 <div class="contenedor">
-                    <div class="tarjeta">
+                    <!-- Tarjetas convertidas en botones clickeables -->
+                    <a href="mascotas.html" class="tarjeta">
                         <h3>Mascotas</h3>
                         <p>Registra y consulta los datos de cada mascota atendida en la clínica.</p>
-                    </div>
-                    <div class="tarjeta">
+                        <span class="btn-flecha">Ver más &rarr;</span>
+                    </a>
+                    <a href="consultas.html" class="tarjeta">
                         <h3>Consultas</h3>
                         <p>Controla y agenda las consultas veterinarias fácilmente.</p>
-                    </div>
-                    <div class="tarjeta">
+                        <span class="btn-flecha">Ver más &rarr;</span>
+                    </a>
+                    <a href="vacunas.html" class="tarjeta">
                         <h3>Vacunas</h3>
                         <p>Revisa el historial de vacunación y mantén los esquemas al día.</p>
-                    </div>
+                        <span class="btn-flecha">Ver más &rarr;</span>
+                    </a>
                 </div>
             </section>
         </main>
+
         <footer>
-            <p>Desarrollo Web y Móvil 2026</p>
+            <p>&copy; 2026 Desarrollo Web y Móvil. Todos los derechos reservados.</p>
         </footer>
     </body>
 </html>

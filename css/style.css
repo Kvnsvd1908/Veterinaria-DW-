@@ -1,53 +1,178 @@
+/* --- CONFIGURACIÓN GENERAL Y PALETA --- */
+:root {
+    --color-primario: #1e3a8a;      /* Azul clínico profesional */
+    --color-secundario: #0d9488;    /* Verde/Teal veterinario */
+    --color-fondo: #f8fafc;         /* Gris claro limpio para el fondo */
+    --color-texto: #334155;         /* Gris oscuro suave para lectura */
+    --color-bordes: #cbd5e1;        /* Gris sutil para bordes */
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
 }
 
+/* --- ENCABEZADO (HEADER) --- */
 header {
-    padding: 20px;
+    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
 }
 
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.3rem;
+}
+
+header p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 1.1rem;
+}
+
+/* --- MENÚ DE NAVEGACIÓN --- */
 nav {
-    padding: 15px;
+    background-color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 nav a {
-    margin-right: 15px;
+    margin: 0 15px;
     text-decoration: none;
+    color: var(--color-texto);
+    font-weight: 600;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
 }
 
+nav a:hover {
+    color: var(--color-secundario);
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
 main {
-    padding: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
-footer {
-    padding: 20px;
+main section {
+    margin-bottom: 40px;
 }
 
+main h2 {
+    color: var(--color-primario);
+    border-bottom: 2px solid var(--color-bordes);
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+/* --- DISEÑO DEL CONTENEDOR Y TARJETAS (BOTONES) --- */
 .contenedor {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap; /* Permite que se acomoden en celulares */
 }
 
-.tarjeta {
-    padding: 20px;
-    border: 1px solid #cccccc;
-    border-radius: 10px;
+/* Aplicado al enlace <a> del HTML anterior */
+a.tarjeta {
+    flex: 1;
+    min-width: 250px; /* Evita que se aplasten en pantallas chicas */
+    padding: 25px;
+    background-color: white;
+    border: 1px solid var(--color-bordes);
+    border-radius: 12px;
+    text-decoration: none; /* Elimina el subrayado */
+    color: var(--color-texto); /* Mantiene el color del texto */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    transition: all 0.3s ease;
 }
+
+a.tarjeta h3 {
+    margin-top: 0;
+    color: var(--color-primario);
+    font-size: 1.3rem;
+}
+
+a.tarjeta p {
+    margin-bottom: 0;
+    color: #64748b; /* Gris intermedio */
+    font-size: 0.95rem;
+}
+
+/* EFECTO HOVER: Movimiento interactivo al pasar el mouse */
+a.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    border-color: var(--color-secundario);
+}
+
+/* --- FORMULARIO DE CONTACTO ESTILIZADO --- */
 form {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
-    gap: 10px;
+    max-width: 450px;
+    gap: 15px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--color-bordes);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    margin-top: 20px;
 }
 
 input,
 textarea {
-    padding: 10px;
+    padding: 12px;
+    border: 1px solid var(--color-bordes);
+    border-radius: 6px;
+    font-size: 1rem;
+    color: var(--color-texto);
+    transition: border-color 0.3s ease;
+}
+
+/* Efecto cuando el usuario escribe en los campos */
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-secundario);
+}
+
+textarea {
+    resize: vertical; /* Permite estirar solo hacia abajo */
+    min-height: 100px;
 }
 
 button {
-    padding: 10px;
+    padding: 12px;
+    background-color: var(--color-secundario);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0f766e; /* Un verde más oscuro al pasar el mouse */
+}
+
+/* --- PIE DE PÁGINA (FOOTER) --- */
+footer {
+    background-color: #1e293b;
+    color: #94a3b8;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 60px;
+    font-size: 0.9rem;
 }
